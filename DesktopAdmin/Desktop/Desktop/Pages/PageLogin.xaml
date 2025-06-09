@@ -1,0 +1,22 @@
+﻿<Page x:Class="Desktop.Pages.PageLogin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Desktop.Pages"
+      xmlns:uc="clr-namespace:Desktop.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageLogin">
+
+    <Grid>
+        <StackPanel Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Логин</TextBlock>
+            <TextBox Name="Login"></TextBox>
+            <TextBlock>Пароль</TextBlock>
+            <uc:UserPassword x:Name="Password"></uc:UserPassword>
+            <Button Name="BtnLogin" Click="BtnLogin_Click">Войти</Button>
+            <TextBlock><Hyperlink><TextBlock Name="TextSignup" MouseDown="TextSignup_MouseUp">Регистрация</TextBlock></Hyperlink></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

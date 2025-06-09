@@ -1,0 +1,115 @@
+﻿<Page x:Class="Desktop.Pages.PageComputers"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Desktop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageComputers"
+      Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock FontSize="23" Foreground="Blue" Margin="5,0">Компьютеры</TextBlock>
+            <TextBlock Name="TextAll" Margin="5,0">Загрузка...</TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="BtnList" Click="BtnList_Click" Width="40">📚</Button>
+            <Button Name="BtnTable" Click="BtnTable_Click" Width="40">🎞</Button>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Height="30">
+                <TextBlock Margin="5,0">Показать</TextBlock>
+                <ComboBox Name="ComboSelected" SelectionChanged="ComboSelected_SelectionChanged" Width="60"></ComboBox>
+                <TextBlock Margin="5,0">записей</TextBlock>
+            </StackPanel>
+
+            <TextBox Name="Search" Grid.Column="1" TextChanged="Search_TextChanged" Height="30" Margin="10"></TextBox>
+            
+            <Button Name="BtnAdd" Click="BtnAdd_Click" Grid.Column="2" Margin="10" Width="200">Добавить</Button>
+        </Grid>
+
+        <ListView Name="ListItems" Grid.Row="2">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Gray">
+                        <Grid Margin="10">
+                            <StackPanel Width="250">
+                                <TextBlock Text="{Binding name}"></TextBlock>
+                                <TextBlock Text="{Binding class_name}"></TextBlock>
+                                <Button x:Name="BtnUse" Click="BtnUse_Click">Управление</Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="✏" Foreground="Blue" Name="BtnEdit" MouseUp="BtnEdit_MouseUp"></TextBlock>
+                                    <TextBlock Text="🗑" Foreground="DarkRed" Name="BtnRemove" MouseUp="BtnRemove_MouseUp"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <DataGrid x:Name="DataItems" Grid.Row="2" AlternationCount="2" LoadingRow="DataItems_LoadingRow">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="AlternationIndex" Value="0">
+                            <Setter Property="Background" Value="Gray"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Класс" Binding="{Binding class_name}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Управление">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="BtnUse" Click="BtnUse_Click">Управление</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Действия">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="✏" Foreground="Blue" Name="BtnEdit" MouseUp="BtnEdit_MouseUp"></TextBlock>
+                                <TextBlock Text="🗑" Foreground="DarkRed" Name="BtnRemove" MouseUp="BtnRemove_MouseUp"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock Name="TextVisible" Grid.Row="2" Margin="10,40">Загрузка...</TextBlock>
+        
+        <TextBlock Name="TextPages" Grid.Row="3">Загрузка...</TextBlock>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Right">
+            <Button Name="BtnDown" Click="BtnDown_Click" Width="30">◀️</Button>
+            <TextBlock Name="TextNow" Width="30" TextAlignment="Center"></TextBlock>
+            <Button Name="BtnUp" Click="BtnUp_Click" Width="30">▶️</Button>
+        </StackPanel>
+    </Grid>
+</Page>

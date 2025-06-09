@@ -1,0 +1,75 @@
+﻿<Window x:Class="Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop"
+        mc:Ignorable="d"
+        Title="Умная школа" Height="450" Width="800"
+        MinHeight="450" MinWidth="800"
+        Icon="/Imports/smart_class_icon.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="0" Name="RowHeader"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0" x:Name="ColNav"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="Black" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3"></Grid>
+
+        <Image Source="/Imports/smart_class_icon_trans_back.png" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50"/>
+
+        <Button Name="BtnMenu" Grid.ColumnSpan="2" HorizontalAlignment="Right" Click="BtnMenu_Click" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Photo}" Width="40" Height="40"></Image>
+                <StackPanel>
+                    <TextBlock Text="{Binding FirstName}"></TextBlock>
+                    <TextBlock Text="{Binding Email}"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="🙍‍ Мой профиль"></MenuItem>
+                    <MenuItem Header="🔒 Мои сессии"></MenuItem>
+                    <MenuItem Header=" ⭕ Выход" Name="BtnLogout" Click="BtnLogout_Click"></MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <StackPanel Name="StackNav" Grid.Row="1" Grid.RowSpan="2" Background="#1d2127" Width="280">
+            <TextBlock Foreground="White" Margin="5,0">Навигация</TextBlock>
+            <StackPanel Margin="10,5">
+                <Button Name="BtnMain" Click="BtnMain_Click" Style="{StaticResource BtnNav}">🔍 Главная</Button>
+                <Button Style="{StaticResource BtnNav}" Name="BtnUsers" Click="BtnUsers_Click">👥 Пользователи</Button>
+                <Button Style="{StaticResource BtnNav}" Name="BtnNews" Click="BtnNews_Click">📰 Новости</Button>
+                <Button Style="{StaticResource BtnNav}" Name="BtnFoods" Click="BtnFoods_Click">🍽️ Столовая</Button>
+                <Button Style="{StaticResource BtnNav}" Name="BtnWorks" Click="BtnWorks_Click">📅 Расписание</Button>
+                <Button Style="{StaticResource BtnNav}" Name="BtnProblems" Click="BtnProblems_Click">⚠️ Технич. проблемы</Button>
+                <Expander Style="{StaticResource ExpNav}" FlowDirection="RightToLeft">
+                    <Expander.Header>
+                        <TextBlock Foreground="White" FlowDirection="LeftToRight" Width="235">⚙️ Администрирование</TextBlock>
+                    </Expander.Header>
+                    <StackPanel FlowDirection="LeftToRight" Margin="10">
+                        <Button Style="{StaticResource BtnNav}" Name="BtnClassses" Click="BtnClassses_Click">🏫 Классы</Button>
+                        <Button Style="{StaticResource BtnNav}" Name="BtnComputers" Click="BtnComputers_Click">💻 Компьютеры</Button>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Name="BtnNav" Click="BtnNav_Click" Grid.Row="1" HorizontalAlignment="Right" Style="{StaticResource BtnNav}" Width="30" 
+                Background="Black" HorizontalContentAlignment="Center">🎞</Button>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Foreground="White" Margin="10,0">Умная школа</TextBlock>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Foreground="White" Name="TextNav" HorizontalAlignment="Right" Margin="10,0"></TextBlock>
+
+        <Frame Name="MyFrame" Grid.Row="2" Grid.Column="1" Background="LightGray" NavigationUIVisibility="Hidden" ContentRendered="MyFrame_ContentRendered"></Frame>
+
+        <StackPanel Name="StackToast" Grid.Column="2" Grid.RowSpan="3" HorizontalAlignment="Right" VerticalAlignment="Top"></StackPanel>
+    </Grid>
+</Window>
