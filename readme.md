@@ -46,7 +46,6 @@
 ## Ссылки
 
 - **Репозиторий проекта:** [GitHub](https://github.com/124476/Smart_Class_desktop/)
-- **Демо-сайт:** [Smart Class](https://demosmartclass.pythonanywhere.com/)
 
 ---
 
