@@ -71,7 +71,14 @@
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\Computer.cs" />
     <Compile Include="Models\ComputerSend.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Foodwork.cs" />
+    <Compile Include="Models\FoodworkSend.cs" />
     <Compile Include="Models\News.cs" />
+    <Compile Include="Models\Object.cs" />
+    <Compile Include="Models\Problem.cs" />
+    <Compile Include="Models\Subsection.cs" />
+    <Compile Include="Models\Topic.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Pages\PageClass.xaml.cs">
       <DependentUpon>PageClass.xaml</DependentUpon>
@@ -85,6 +92,21 @@
     <Compile Include="Pages\PageComputers.xaml.cs">
       <DependentUpon>PageComputers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageFood.xaml.cs">
+      <DependentUpon>PageFood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageFoods.xaml.cs">
+      <DependentUpon>PageFoods.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageFoodwork.xaml.cs">
+      <DependentUpon>PageFoodwork.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageFoodworks.xaml.cs">
+      <DependentUpon>PageFoodworks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageFoodworkToday.xaml.cs">
+      <DependentUpon>PageFoodworkToday.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageLogin.xaml.cs">
       <DependentUpon>PageLogin.xaml</DependentUpon>
     </Compile>
@@ -96,6 +118,18 @@
     </Compile>
     <Compile Include="Pages\PageNewsSee.xaml.cs">
       <DependentUpon>PageNewsSee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageObjects.xaml.cs">
+      <DependentUpon>PageObjects.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageProblems.xaml.cs">
+      <DependentUpon>PageProblems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageSubsections.xaml.cs">
+      <DependentUpon>PageSubsections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageTopics.xaml.cs">
+      <DependentUpon>PageTopics.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageUseComputer.xaml.cs">
       <DependentUpon>PageUseComputer.xaml</DependentUpon>
@@ -136,6 +170,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageFood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageFoods.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageFoodwork.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageFoodworks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageFoodworkToday.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +203,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageNewsSee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageObjects.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageProblems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageSubsections.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageTopics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

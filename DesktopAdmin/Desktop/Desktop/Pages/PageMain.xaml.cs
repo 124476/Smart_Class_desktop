@@ -35,6 +35,7 @@ namespace Desktop.Pages
 
             Refresh();
         }
+
         private async void Refresh()
         {
             var computers = await NetManage.Get<List<Computer>>("api/computers/");
@@ -70,6 +71,65 @@ namespace Desktop.Pages
             TabChart.AxisX[0].Separator = new LiveCharts.Wpf.Separator() { Step = 1 };
 
             TabChart.Series = series;
+
+
+
+            UsersPieChart.Series = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Пользователи",
+                    Values = new ChartValues<double> { computers.Count },
+                    DataLabels = true
+                }
+            };
+
+
+
+            var avgActivity = computers
+                .Select(x => (x.updated_at - x.created_at).TotalHours)
+                .DefaultIfEmpty(0).Average();
+            ActivityGauge.Value = avgActivity;
+
+
+
+            var total = computers.Count;
+            var errors = computers.Count(x => x.is_work);
+            ErrorBarChart.Series = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Title = "Включенных",
+                    Values = new ChartValues<int> { errors }
+                },
+                new ColumnSeries
+                {
+                    Title = "Всего",
+                    Values = new ChartValues<int> { total }
+                }
+            };
+
+
+            var roomGroups = computers
+                .Where(c => !string.IsNullOrEmpty(c.class_name))
+                .GroupBy(c => c.class_name)
+                .Select(g => new { Room = g.Key, Count = g.Count() })
+                .OrderByDescending(g => g.Count)
+                .ToList();
+
+            RoomLoadChart.Series = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Title = "Компьютеры",
+                    Values = new ChartValues<double>(roomGroups.Select(x => (double)x.Count)),
+                    DataLabels = true
+                }
+            };
+
+            RoomLoadChart.AxisX[0].Labels = roomGroups.Select(x => x.Room).ToArray();
+            RoomLoadChart.AxisX[0].Separator = new LiveCharts.Wpf.Separator { Step = 1 };
+
         }
 
         private void Expander_Drop(object sender, DragEventArgs e)

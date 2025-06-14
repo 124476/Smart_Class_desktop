@@ -79,12 +79,6 @@ namespace Desktop
             DataContext = App.User;
         }
 
-        private void BtnMonitor_Click(object sender, RoutedEventArgs e)
-        {
-            TextNav.Text = "Главная / Монитор ТА";
-            //MyFrame.Navigate(new PageMonitor());
-        }
-
         private void BtnUsers_Click(object sender, RoutedEventArgs e)
         {
             TextNav.Text = "Пользователи";
@@ -99,7 +93,8 @@ namespace Desktop
 
         private void BtnFoods_Click(object sender, RoutedEventArgs e)
         {
-
+            TextNav.Text = "Столовая / Питание";
+            MyFrame.Navigate(new PageFoods());
         }
 
         private void BtnWorks_Click(object sender, RoutedEventArgs e)
@@ -109,7 +104,8 @@ namespace Desktop
 
         private void BtnProblems_Click(object sender, RoutedEventArgs e)
         {
-
+            TextNav.Text = "Технические проблемы";
+            MyFrame.Navigate(new PageProblems());
         }
 
         private void BtnClassses_Click(object sender, RoutedEventArgs e)
@@ -122,6 +118,18 @@ namespace Desktop
         {
             TextNav.Text = "Администрирование / Компьютеры";
             MyFrame.Navigate(new PageComputers());
+        }
+
+        private void BtnFoodworks_Click(object sender, RoutedEventArgs e)
+        {
+            TextNav.Text = "Столовая / Расписание питания";
+            MyFrame.Navigate(new PageFoodworks());
+        }
+
+        private void BtnObjeccts_Click(object sender, RoutedEventArgs e)
+        {
+            TextNav.Text = "Карточки обучения";
+            MyFrame.Navigate(new PageObjects());
         }
     }
 }

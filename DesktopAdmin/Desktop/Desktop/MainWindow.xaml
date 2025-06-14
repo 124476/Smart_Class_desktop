@@ -46,9 +46,18 @@
                 <Button Name="BtnMain" Click="BtnMain_Click" Style="{StaticResource BtnNav}">🔍 Главная</Button>
                 <Button Style="{StaticResource BtnNav}" Name="BtnUsers" Click="BtnUsers_Click">👥 Пользователи</Button>
                 <Button Style="{StaticResource BtnNav}" Name="BtnNews" Click="BtnNews_Click">📰 Новости</Button>
-                <Button Style="{StaticResource BtnNav}" Name="BtnFoods" Click="BtnFoods_Click">🍽️ Столовая</Button>
-                <Button Style="{StaticResource BtnNav}" Name="BtnWorks" Click="BtnWorks_Click">📅 Расписание</Button>
+                <Button Style="{StaticResource BtnNav}" Name="BtnObjeccts" Click="BtnObjeccts_Click">🏫 Карточки обучения</Button>
                 <Button Style="{StaticResource BtnNav}" Name="BtnProblems" Click="BtnProblems_Click">⚠️ Технич. проблемы</Button>
+                <Expander Style="{StaticResource ExpNav}" FlowDirection="RightToLeft">
+                    <Expander.Header>
+                        <TextBlock Foreground="White" FlowDirection="LeftToRight" Width="235">🍽️ Столовая</TextBlock>
+                    </Expander.Header>
+                    <StackPanel FlowDirection="LeftToRight" Margin="10">
+                        <Button Style="{StaticResource BtnNav}" Name="BtnFoods" Click="BtnFoods_Click">🥙 Питание</Button>
+                        <Button Style="{StaticResource BtnNav}" Name="BtnFoodworks" Click="BtnFoodworks_Click">🍴 Расписание питания</Button>
+                    </StackPanel>
+                </Expander>
+                <!--<Button Style="{StaticResource BtnNav}" Name="BtnWorks" Click="BtnWorks_Click">📅 Расписание</Button>-->
                 <Expander Style="{StaticResource ExpNav}" FlowDirection="RightToLeft">
                     <Expander.Header>
                         <TextBlock Foreground="White" FlowDirection="LeftToRight" Width="235">⚙️ Администрирование</TextBlock>

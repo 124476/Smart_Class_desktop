@@ -9,74 +9,94 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageMain">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
 
-        <TextBlock Margin="10" FontSize="21">Личный кабинет. Главная</TextBlock>
+            <TextBlock Margin="10" FontSize="21">Личный кабинет. Главная</TextBlock>
 
-        <WrapPanel Name="ListForms" Grid.Row="1">
-            <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="250" Height="200" Margin="10" MouseDown="Expander_MouseDown">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <TextBlock Padding="5">Эффективность сети</TextBlock>
+            <WrapPanel Name="ListForms" Grid.Row="1">
+                <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="250" Height="200" Margin="10" MouseDown="Expander_MouseDown">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Padding="5">Количество пользователей</TextBlock>
 
-                <Grid Background="White" Grid.Row="1">
-                    
+                    <Grid Background="White" Grid.Row="1">
+                        <charts:PieChart Name="UsersPieChart" InnerRadius="30" LegendLocation="Bottom"></charts:PieChart>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="250" Height="200" Margin="10" MouseDown="Expander_MouseDown">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <TextBlock Padding="5">Эффективность сети</TextBlock>
+                <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="250" Height="200" Margin="10" MouseDown="Expander_MouseDown">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Padding="5">Среднее время активности</TextBlock>
 
-                <Grid Background="White" Grid.Row="1">
-
+                    <Grid Background="White" Grid.Row="1">
+                        <charts:AngularGauge Name="ActivityGauge" NeedleFill="Green" SectionsInnerRadius="0.5">
+                            <charts:AngularGauge.Sections>
+                                <charts:AngularSection FromValue="0" ToValue="100" Fill="Gray"></charts:AngularSection>
+                            </charts:AngularGauge.Sections>
+                        </charts:AngularGauge>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="250" Height="200" Margin="10" MouseDown="Expander_MouseDown">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <TextBlock Padding="5">Эффективность сети</TextBlock>
+                <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="250" Height="200" Margin="10" MouseDown="Expander_MouseDown">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Padding="5">Активность ПК</TextBlock>
 
-                <Grid Background="White" Grid.Row="1">
-
+                    <Grid Background="White" Grid.Row="1">
+                        <charts:CartesianChart Name="ErrorBarChart">
+                            <charts:CartesianChart.AxisX>
+                                <charts:Axis Title="Статус" Labels="Ошибки,Всего" />
+                            </charts:CartesianChart.AxisX>
+                            <charts:CartesianChart.AxisY>
+                                <charts:Axis Title="Количество" />
+                            </charts:CartesianChart.AxisY>
+                        </charts:CartesianChart>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="520" Height="200" Margin="10" MouseDown="Expander_MouseDown">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <TextBlock Padding="5">Динамика подключения компьютеров за последние 10 дней</TextBlock>
+                <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="520" Height="200" Margin="10" MouseDown="Expander_MouseDown">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Padding="5">Динамика подключения компьютеров за последние 10 дней</TextBlock>
 
-                <Grid Background="White" Grid.Row="1">
-                    <charts:CartesianChart Grid.Row="1" x:Name="TabChart">
-                        <charts:CartesianChart.AxisX>
-                            <charts:Axis Separator="{x:Static charts:DefaultAxes.CleanSeparator}"></charts:Axis>
-                        </charts:CartesianChart.AxisX>
-                    </charts:CartesianChart>
+                    <Grid Background="White" Grid.Row="1">
+                        <charts:CartesianChart Grid.Row="1" x:Name="TabChart">
+                            <charts:CartesianChart.AxisX>
+                                <charts:Axis Separator="{x:Static charts:DefaultAxes.CleanSeparator}"></charts:Axis>
+                            </charts:CartesianChart.AxisX>
+                        </charts:CartesianChart>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="250" Height="200" Margin="10" MouseDown="Expander_MouseDown">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <TextBlock Padding="5">Эффективность сети</TextBlock>
+                <Grid AllowDrop="True" Drop="Expander_Drop" Background="Gray" Width="520" Height="200" Margin="10" MouseDown="Expander_MouseDown">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Padding="5">Эффективность сети</TextBlock>
 
-                <Grid Background="White" Grid.Row="1">
-
+                    <Grid Background="White" Grid.Row="1">
+                        <charts:CartesianChart Name="RoomLoadChart" Margin="10">
+                            <charts:CartesianChart.AxisX>
+                                <charts:Axis Title="Кабинет"/>
+                            </charts:CartesianChart.AxisX>
+                            <charts:CartesianChart.AxisY>
+                                <charts:Axis Title="Количество ПК"/>
+                            </charts:CartesianChart.AxisY>
+                        </charts:CartesianChart>
+                    </Grid>
                 </Grid>
-            </Grid>
-        </WrapPanel>
-    </Grid>
+            </WrapPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>
