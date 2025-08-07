@@ -46,7 +46,7 @@
                 <Button Name="BtnMain" Click="BtnMain_Click" Style="{StaticResource BtnNav}">🔍 Главная</Button>
                 <Button Style="{StaticResource BtnNav}" Name="BtnUsers" Click="BtnUsers_Click">👥 Пользователи</Button>
                 <Button Style="{StaticResource BtnNav}" Name="BtnNews" Click="BtnNews_Click">📰 Новости</Button>
-                <Button Style="{StaticResource BtnNav}" Name="BtnObjeccts" Click="BtnObjeccts_Click">🏫 Карточки обучения</Button>
+                <!--<Button Style="{StaticResource BtnNav}" Name="BtnObjeccts" Click="BtnObjeccts_Click">🏫 Карточки обучения</Button>-->
                 <Button Style="{StaticResource BtnNav}" Name="BtnProblems" Click="BtnProblems_Click">⚠️ Технич. проблемы</Button>
                 <Expander Style="{StaticResource ExpNav}" FlowDirection="RightToLeft">
                     <Expander.Header>

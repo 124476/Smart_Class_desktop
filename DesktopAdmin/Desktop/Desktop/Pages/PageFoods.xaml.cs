@@ -122,7 +122,7 @@ namespace Desktop.Pages
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            var food = new Food() { user = App.User.MainUser, };
+            var food = new Food() { user = App.User.MainUser, price = "", };
 
             NavigationService.Navigate(new PageFood(food));
         }

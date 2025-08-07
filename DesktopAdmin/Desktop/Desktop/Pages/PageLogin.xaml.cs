@@ -54,7 +54,7 @@ namespace Desktop.Pages
             }
             catch
             {
-                App.MessageToast("Неверные данные", 0);
+                App.MessageToast("Ошибка входа", 0);
             }
         }
 

@@ -29,13 +29,6 @@ namespace Desktop.Models
                 return $"{FirstName} {LastName[0]}.";
             }
         }
-        public List<string> Roles { get; set; }
-        public string RolesName
-        {
-            get
-            {
-                return string.Join("\n", Roles);
-            }
-        }
+        public string Role { get; set; }
     }
 }
