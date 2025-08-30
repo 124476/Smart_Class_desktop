@@ -13,6 +13,6 @@ namespace Desktop
     /// </summary>
     public partial class App : Application
     {
-        public static string host = "http://127.0.0.1:8000/";
+        public static string host = "https://smart-class.onrender.com/";
     }
 }

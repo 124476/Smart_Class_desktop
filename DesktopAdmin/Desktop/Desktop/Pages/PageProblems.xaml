@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <TextBlock FontSize="23" Foreground="Blue" Margin="5,0">Компьютеры</TextBlock>
+            <TextBlock FontSize="23" Foreground="Blue" Margin="5,0">Тех. проблемы</TextBlock>
             <TextBlock Name="TextAll" Margin="5,0">Загрузка...</TextBlock>
         </StackPanel>
 

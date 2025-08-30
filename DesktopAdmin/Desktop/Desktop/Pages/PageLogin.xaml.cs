@@ -45,12 +45,16 @@ namespace Desktop.Pages
                     var responseContent = await loginResponse.Content.ReadAsStringAsync();
 
                     App.User = JsonConvert.DeserializeObject<User>(responseContent);
+                    
+                    if (App.User.IsSuperUser)
+                    {
+                        NavigationService.Navigate(new PageMain());
 
-                    NavigationService.Navigate(new PageMain());
-
-                    App.MessageToast("Совершен успешный вход", 2);
+                        App.MessageToast("Совершен успешный вход", 2);
+                        return;
+                    }
                 }
-                else App.MessageToast("Неверные данные", 0);
+                App.MessageToast("Неверные данные", 0);
             }
             catch
             {

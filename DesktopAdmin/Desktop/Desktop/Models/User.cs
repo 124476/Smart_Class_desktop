@@ -13,7 +13,8 @@ namespace Desktop.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Image { get; set; }
-        public int MainUser { get; set; }
+        public bool IsSuperUser { get; set; }
+        public int MainUser { get; set; } = 1;
         public byte[] Photo
         {
             get

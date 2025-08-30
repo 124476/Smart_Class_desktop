@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\
+C:\Users\User\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\
 Desktop
 none
 false
 TRACE
-C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\App.xaml
-16980479664
+C:\Users\User\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\App.xaml
+21-290786930
 
-30-1384621502
-16-1849642598
-Controls\UserPassword.xaml;MainWindow.xaml;Pages\PageClass.xaml;Pages\PageClasses.xaml;Pages\PageComputer.xaml;Pages\PageComputers.xaml;Pages\PageFood.xaml;Pages\PageFoods.xaml;Pages\PageFoodworks.xaml;Pages\PageLogin.xaml;Pages\PageMain.xaml;Pages\PageNews.xaml;Pages\PageNewsSee.xaml;Pages\PageProblems.xaml;Pages\PageUseComputer.xaml;Pages\PageUsers.xaml;
+39664177858
+16-952901562
+Controls\UserPassword.xaml;MainWindow.xaml;Pages\PageClass.xaml;Pages\PageClasses.xaml;Pages\PageComputer.xaml;Pages\PageComputers.xaml;Pages\PageFood.xaml;Pages\PageFoods.xaml;Pages\PageFoodwork.xaml;Pages\PageFoodworks.xaml;Pages\PageFoodworkToday.xaml;Pages\PageLogin.xaml;Pages\PageMain.xaml;Pages\PageNews.xaml;Pages\PageNewsSee.xaml;Pages\PageObjects.xaml;Pages\PageProblems.xaml;Pages\PageSubsections.xaml;Pages\PageTopics.xaml;Pages\PageUseComputer.xaml;Pages\PageUsers.xaml;
 imports\splash.png
 False
 
