@@ -46,7 +46,7 @@ namespace Desktop.Pages
             {
                 var textDay = new TextBlock()
                 {
-                    Text = Weeks[(indexDay + dat + 1) % 7],
+                    Text = Weeks[indexDay],
                     VerticalAlignment = VerticalAlignment.Top,
                     HorizontalAlignment = HorizontalAlignment.Center,
                 };

@@ -24,7 +24,7 @@
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Padding="5">Количество пользователей</TextBlock>
+                    <TextBlock Padding="5">Количество компьютеров</TextBlock>
 
                     <Grid Background="White" Grid.Row="1">
                         <charts:PieChart Name="UsersPieChart" InnerRadius="30" LegendLocation="Bottom"></charts:PieChart>
@@ -55,7 +55,7 @@
                     <Grid Background="White" Grid.Row="1">
                         <charts:CartesianChart Name="ErrorBarChart">
                             <charts:CartesianChart.AxisX>
-                                <charts:Axis Title="Статус" Labels="Ошибки,Всего" />
+                                <charts:Axis Title="Статус" Labels="Включенных;Всего" />
                             </charts:CartesianChart.AxisX>
                             <charts:CartesianChart.AxisY>
                                 <charts:Axis Title="Количество" />

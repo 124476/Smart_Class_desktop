@@ -44,7 +44,7 @@ namespace Desktop.Pages
 
             var columns = new ColumnSeries()
             {
-                Title = "Продажи",
+                Title = "Подключение",
                 Values = new ChartValues<double>(),
                 DataLabels = true,
             };
@@ -73,24 +73,18 @@ namespace Desktop.Pages
             TabChart.Series = series;
 
 
-
             UsersPieChart.Series = new SeriesCollection
             {
                 new PieSeries
                 {
-                    Title = "Пользователи",
+                    Title = "Компьютеры",
                     Values = new ChartValues<double> { computers.Count },
                     DataLabels = true
                 }
             };
 
 
-
-            var avgActivity = computers
-                .Select(x => (x.updated_at - x.created_at).TotalHours)
-                .DefaultIfEmpty(0).Average();
-            ActivityGauge.Value = avgActivity;
-
+            ActivityGauge.Value = 50;
 
 
             var total = computers.Count;

@@ -121,3 +121,13 @@ C:\Users\User\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\
 C:\Users\User\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Desktop.csproj.Up2Date
 C:\Users\User\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Desktop.exe
 C:\Users\User\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Desktop.pdb
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageFoodwork.g.cs
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageFoodworkToday.g.cs
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageObjects.g.cs
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageSubsections.g.cs
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageTopics.g.cs
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageFoodwork.baml
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageFoodworkToday.baml
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageObjects.baml
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageSubsections.baml
+C:\Users\art82\source\repos\Smart_Class_desktop\DesktopAdmin\Desktop\Desktop\obj\Release\Pages\PageTopics.baml
